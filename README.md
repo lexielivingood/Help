@@ -132,10 +132,33 @@ poker_vector > 0
 selection_vector <- poker_vector > 0
 #Select desired elements
 poker_vector[selection_vector]
-#R will only select elements that correspond to TRUE in selection_vector]
+#R will only select elements that are TRUE in selection_vector]
 
 ## Matrices
 
+#A matrix is a group of elements of the same data type arranged into rows and columns.
+#use matrix() function
+
+#Example:
+matrix(1:9, byrow = TRUE, nrow = 3)
+# 1:9 = elements that R will arrange into the rows and columns of the matrix.
+# byrow = TRUE the matrix is filled by the rows.
+# byrow = FALSE = the matrix is filled by the columns
+# nrow = number of rows.
+
+#Analyze matrices
+#Three given vectors
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+#Combine multiple vectors into a single one
+box_office <- c(new_hope, empire_strikes, return_jedi)
+#Contruct a matrix from vector 
+star_wars_matrix <- matrix(box_office, byrow = TRUE, nrow = 3)
+star_wars_matrix
+
+#Naming a matrix 
+#You can add names for the rows and the columns of a matrix
 
 ## Factors
 
