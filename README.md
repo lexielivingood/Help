@@ -134,10 +134,6 @@ selection_vector <- poker_vector > 0
 poker_vector[selection_vector]
 #R will only select elements that correspond to TRUE in selection_vector]
 
-
-
-
-
 ## Matrices
 
 
