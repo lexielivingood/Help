@@ -103,6 +103,40 @@ poker_vector[2:4]
 
 #Assigned names can be used instead of numerical values
 poker_vector["Monday"]
+poker_vector [c("Monday", "Friday")]
+
+#Calculate average values
+mean(poker_vector)
+
+#SELECTION BY COMPARISON
+#The (logical) comparison operators known to R are:
+#< less than 
+poker_vector < roulette_vector
+#> greater than 
+poker_vector > roulette_vector
+#<= less than or equal to
+poker_vector <= roulette_vector
+#>= greater than or equal to
+poker_vector >= roulette_vector
+#== equal to each other
+poker_vector == roulette_vector
+#!= not equal to each other
+poker_vector != roulette_vector
+
+#Comparison operators can also be used on vectors
+c(4, 5, 6) > 5
+
+#Find which elements are greater than 0
+poker_vector > 0
+#Assign a variable
+selection_vector <- poker_vector > 0
+#Select desired elements
+poker_vector[selection_vector]
+#R will only select elements that correspond to TRUE in selection_vector]
+
+
+
+
 
 ## Matrices
 
