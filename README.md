@@ -84,6 +84,25 @@ a <- c(1, 2, 3)
 b <- c(4, 5, 6)
 c <- a + b
 
+#Calculate sum of all elements of a vector 
+sum(poker_vector)
+
+#Check if one sum is greater than another
+roulette_vector <- c(-24, -50, 100, -350, 10)
+sum(poker_vector) > sum(roulette_vector)
+
+#Select specific elements of a vector 
+#type name of vector than number of element in [] (first element is 1)
+poker_vector[1]
+
+#Select multiple elements of a vector with c() inside brackets
+poker_vector[c(1,5)]
+
+#c(2, 3, 4) can be abbreviated to 2:4
+poker_vector[2:4]
+
+#Assigned names can be used instead of numerical values
+poker_vector["Monday"]
 
 ## Matrices
 
