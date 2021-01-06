@@ -174,6 +174,15 @@ worldwide_vector <- rowSums(star_wars_matrix)
 #Merge matrices/vectors by column
 all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
 
+#Merge matrices/vectors by row
+rbind(star_wars_matrix, c(1,2))
+
+#Calculate totals for each column of matrix
+colSums(star_wars_matrix)
+
+#You can use [] to select specific elements from a matrix. Use a comma to separate rows from columns:
+
+
 ## Factors
 
 
