@@ -202,7 +202,8 @@ star_wars_matrix * star_wars_matrix
 #Use the function factor() to create factors
 
 #First, create a vector that contains limited number of categories 
-sex_vector <- c("male" "female", "female", male", "male")
+sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+sex_vector
 #(this vector has 2 categories)
 
 #Encode vector as a factor:
@@ -215,8 +216,22 @@ factor_sex_vector
 
 #Factor levels:
 #factors can contain specific factor levels. Use levels() to change names of these levels.
-levels(factor_sex_vector) <- c("name1", "name2", "name2", "name1")
+levels(factor_sex_vector) <- c("name1", "name2")
 factor_sex_vector
+
+#Pay attention to the order in which you assign levels; if you don;t specify the levels of the factor, they will be assigned alphabetically. Type: 
+levels(factor_sex_vector)
+#to see outputs in the order which you should type the corresponding names
+
+#Summarizing a factor 
+#The command summary() will give you an overview of the contents of a variable
+summary(sex_vector)
+
+#You can try to compare values in a factor...
+female <- factor_sex_vector[2]
+male <- factor_sex_vector[1]
+male > female
+#But it won't work b/c male and female are nominal factor levels
 
 
 ## Data frames
