@@ -196,6 +196,27 @@ star_wars_matrix * 2
 star_wars_matrix * star_wars_matrix
 
 ## Factors
+#Factor = statistical data type used to store catagorical variables 
+#A catagorical variable can belong to a limited number of categories, as opposed to a continuous variable that can respon to an infinite number of values 
+
+#Use the function factor() to create factors
+
+#First, create a vector that contains limited number of categories 
+sex_vector <- c("male" "female", "female", male", "male")
+#(this vector has 2 categories)
+
+#Encode vector as a factor:
+factor_sex_vector <- factor(sex_vector)
+factor_sex_vector
+
+#There are 2 types of categorical variables: 
+#1) Nominal categorical variables do not have an implied order
+#2) Ordinal categorical variables do have an apparent order
+
+#Factor levels:
+#factors can contain specific factor levels. Use levels() to change names of these levels.
+levels(factor_sex_vector) <- c("name1", "name2", "name2", "name1")
+factor_sex_vector
 
 
 ## Data frames
