@@ -159,7 +159,20 @@ star_wars_matrix
 
 #Naming a matrix 
 #You can add names for the rows and the columns of a matrix
+#Vectors used for naming:
+region <- c("US", "non-US")
+titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+#Name the columns with colnames()
+colnames(star_wars_matrix) <- region
+#Name the rows with rownames() then print
+rownames(star_wars_matrix) <- titles
+star_wars_matrix
 
+#Calculate totals for each row of matrix 
+worldwide_vector <- rowSums(star_wars_matrix)
+
+#Merge matrices/vectors by column
+all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
 
 ## Factors
 
