@@ -180,8 +180,20 @@ rbind(star_wars_matrix, c(1,2))
 #Calculate totals for each column of matrix
 colSums(star_wars_matrix)
 
-#You can use [] to select specific elements from a matrix. Use a comma to separate rows from columns:
+#You can use [] to select specific elements from a matrix. Use a comma to separate rows from columns with the rows on the left:
+star_wars_matrix[1,2]
 
+#Select all elements of a row or column by leaving out the number on the other side of the comma:
+star_wars_matrix[,1]
+star_wars_matrix[1,]
+
+#Math w/ matrices
+#Use standard operators (+, *, etc)
+#Multiply matrix by 2
+star_wars_matrix * 2
+
+#Matrices can be multiplied by eachother where each element is the product of the cooresponding elements
+star_wars_matrix * star_wars_matrix
 
 ## Factors
 
