@@ -248,6 +248,8 @@ levels = c("slow", "medium", "fast"))
 factor_speed_vector[2] > factor_speed_vector[5]
 
 ## Data frames
-
+#Data frames have variables of a data set as columns and the observations as rows
+#It can be useful to show a small part of a data set. Use function head() to show first observations of a data frame. Use function tail() to show last observations.
+#Both functions print a "header" which has names of variables
 
 ## Lists
