@@ -233,6 +233,19 @@ male <- factor_sex_vector[1]
 male > female
 #But it won't work b/c male and female are nominal factor levels
 
+#Ordered factors
+#example, first create a vector:
+speed_vector <- c("medium", "slow", "slow", "medium", "fast")
+
+#convert speed_vector from an unordered factor (defult using factor()) to an ordinal one
+#Do this by adding two additional arguments: ordered and levels
+factor_speed_vector <- factor(speed_vector,
+ordered = TRUE,
+levels = c("slow", "medium", "fast"))
+
+#We can now compare elements as factor_speed_vector is ordered
+#Compare second and fifth values
+factor_speed_vector[2] > factor_speed_vector[5]
 
 ## Data frames
 
