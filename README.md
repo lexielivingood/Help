@@ -4,28 +4,26 @@
 
 <https://learn.datacamp.com/courses/free-introduction-to-r>
 
-## Intro to basics
+# Intro to basics
 
-#HOW IT WORKS
+### Use # to add comments that aren't run as R code
 
-#Use # to add comments that aren't run as R code
+### Math W/ R
 
-#Math W/ R
-
-#Addition: 
+### Addition: 
 3 + 4
-#Subtraction: 
+### Subtraction: 
 5 - 5 
-#Multiplication:
+### Multiplication:
 3 * 5
-#Division: (w/ parentheses)
+### Division: (w/ parentheses)
 (5 + 5) / 2
-#Exponentiation: 
+### Exponentiation: 
 2^5
-#Modulo:(remainder of division)
+### Modulo:(remainder of division)
 28 %% 6
 
-#STORE A VALUE AS A VARIABLE
+## STORE A VALUE AS A VARIABLE
 
 #Assign a value 4 to the variable my_var:
 my_var <- 4
