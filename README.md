@@ -258,7 +258,67 @@ tail(mtcars)
 str(mtcars)
 
 ## Creating a data frame
-### Use the data.frame() function
-### You can use [] to select elements from a data frame
+### Use these vectors for an example
+name <- c("Mercury", "Venus", "Earth", 
+          "Mars", "Jupiter", "Saturn", 
+          "Uranus", "Neptune")
+type <- c("Terrestrial planet", 
+          "Terrestrial planet", 
+          "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", 
+          "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 
+              11.209, 9.449, 4.007, 3.883)
+rotation <- c(58.64, -243.02, 1, 1.03, 
+              0.41, 0.43, -0.72, 0.67)
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+### Use the data.frame() function to make a data frame from the given vectors:
+planets_df <- data.frame(name, type, diameter, rotation, rings)
+planets_df
+
+## You can use [] to select elements from a data frame
+planets_df[1,3]
+### (diameter of Mercury)
+
+### You can also use varible names to select elements (this is usuallly more convenient)
+planets_df[1:3,"type"]
+
+### There's a shortcut to selecting an entire column. If your columns have names, you can use $ then type the name of the column. 
+planets_df$diameter
+
+### Leave out info on the right side of the comma to select all rows, and the left to select all columns 
+planets_df[,3]
+
+### Use the subset() function as a shortcut to select all elements with a given condition 
+subset(planets_df, subset = rings)
+
+## Sorting 
+### You can sort data according to a variable in the data set with function order(), which gives a ranked position of each element applied to a variable 
+a <- c(100, 10, 1000)
+order(a)
+### Numbers are ranked from smallest to largest in this example
+
+### You can reshufle the vector to put the numbers in order with brackets:
+a[order(a)]
+
+### For example, rearrange planets_df from the smallest to largest planet:
+positions <- order(planets_df$diameter)
+positions
+planets_df[positions, ]
 
 ## Lists
+
+### Lists allow you to gather a variety of objects under one name in an ordered way. Objects don't need to be related. 
+
+## Creating a list: use list()
+### For an example, take these objects:
+my_vector <- 1:10
+my_matrix <- matrix(1:9, ncol = 3)
+my_df <- mtcars[1:10,]
+### Then create a list 
+my_list <- list(my_vector, my_matrix, my_df)
+my_list
+
+## Creating a named list 
+
