@@ -252,4 +252,10 @@ factor_speed_vector[2] > factor_speed_vector[5]
 #It can be useful to show a small part of a data set. Use function head() to show first observations of a data frame. Use function tail() to show last observations.
 #Both functions print a "header" which has names of variables
 
+#The function str() shows the structure of a data set
+
+#Creating a data frame
+#Use the data.frame() function
+#You can use [] to select elements from a data frame
+
 ## Lists
