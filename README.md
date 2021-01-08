@@ -66,37 +66,36 @@ some_vector <- c("Element1", "Element2")
 names(some_vector) <- c("Name1", "Name2")
 some_vector
 
-#You can create a variable for names for elements of a vector 
+### You can create a variable for names for elements of a vector 
 poker_vector <- c(140, -50, 20, -120, 240)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 names(poker_vector) <- days_vector
 poker_vector
 
-#Calculate totals from vectors
-#if you sum 2 vectors, it takes the element-wise sum
+### Calculate totals from vectors: if you sum 2 vectors, it takes the element-wise sum
 c(1, 2, 3) + c(4, 5, 6)
 c(1 + 4, 2 + 5, 3 + 6)
 
-#Calculations can be done with variables
+### Calculations can be done with variables
 a <- c(1, 2, 3) 
 b <- c(4, 5, 6)
 c <- a + b
+c
 
-#Calculate sum of all elements of a vector 
+### Calculate sum of all elements of a vector with sum()
 sum(poker_vector)
 
-#Check if one sum is greater than another
+### Check if one sum is greater than another
 roulette_vector <- c(-24, -50, 100, -350, 10)
 sum(poker_vector) > sum(roulette_vector)
 
-#Select specific elements of a vector 
-#type name of vector than number of element in [] (first element is 1)
+### Select specific elements of a vector: type name of vector then tyoe the number of the element in brackets (first element is 1)
 poker_vector[1]
 
-#Select multiple elements of a vector with c() inside brackets
+### Select multiple elements of a vector with c() inside brackets
 poker_vector[c(1,5)]
 
-#c(2, 3, 4) can be abbreviated to 2:4
+### c(2, 3, 4) can be abbreviated to 2:4
 poker_vector[2:4]
 
 #Assigned names can be used instead of numerical values
