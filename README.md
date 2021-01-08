@@ -98,161 +98,159 @@ poker_vector[c(1,5)]
 ### c(2, 3, 4) can be abbreviated to 2:4
 poker_vector[2:4]
 
-#Assigned names can be used instead of numerical values
+### Assigned names can be used instead of numerical values
 poker_vector["Monday"]
 poker_vector [c("Monday", "Friday")]
 
-#Calculate average values
+### Calculate average values using mean()
 mean(poker_vector)
 
-#SELECTION BY COMPARISON
-#The (logical) comparison operators known to R are:
-#< less than 
+## Selection by comparison 
+### The (logical) comparison operators known to R are:
+### < less than 
 poker_vector < roulette_vector
-#> greater than 
+### > greater than 
 poker_vector > roulette_vector
-#<= less than or equal to
+### <= less than or equal to
 poker_vector <= roulette_vector
-#>= greater than or equal to
+### >= greater than or equal to
 poker_vector >= roulette_vector
-#== equal to each other
+### == equal to each other
 poker_vector == roulette_vector
-#!= not equal to each other
+### != not equal to each other
 poker_vector != roulette_vector
 
-#Comparison operators can also be used on vectors
+### Comparison operators can also be used on vectors
 c(4, 5, 6) > 5
 
-#Find which elements are greater than 0
+### Find which elements are greater than 0
 poker_vector > 0
-#Assign a variable
+### Assign a variable
 selection_vector <- poker_vector > 0
-#Select desired elements
+### Select desired elements
 poker_vector[selection_vector]
-#R will only select elements that are TRUE in selection_vector]
+### R will only select elements that are TRUE in selection_vector]
 
 ## Matrices
 
-#A matrix is a group of elements of the same data type arranged into rows and columns.
-#use matrix() function
+### A matrix is a group of elements of the same data type arranged into rows and columns. Use matrix() function
 
-#Example:
+### Example:
 matrix(1:9, byrow = TRUE, nrow = 3)
-# 1:9 = elements that R will arrange into the rows and columns of the matrix.
-# byrow = TRUE the matrix is filled by the rows.
-# byrow = FALSE = the matrix is filled by the columns
-# nrow = number of rows.
+### 1:9 = elements that R will arrange into the rows and columns of the matrix.
+### byrow = TRUE the matrix is filled by the rows.
+### byrow = FALSE = the matrix is filled by the columns
+### nrow = number of rows.
 
-#Analyze matrices
-#Three given vectors
+## Analyze matrices
+### Take these three given vectors
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
 return_jedi <- c(309.306, 165.8)
-#Combine multiple vectors into a single one
+### Combine multiple vectors into a single one
 box_office <- c(new_hope, empire_strikes, return_jedi)
-#Contruct a matrix from vector 
+### Contruct a matrix from the vector 
 star_wars_matrix <- matrix(box_office, byrow = TRUE, nrow = 3)
 star_wars_matrix
 
-#Naming a matrix 
-#You can add names for the rows and the columns of a matrix
-#Vectors used for naming:
+## Naming a matrix 
+### You can add names for the rows and the columns of a matrix
+### Use these vectors for an example:
 region <- c("US", "non-US")
 titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
-#Name the columns with colnames()
+### Name the columns with colnames()
 colnames(star_wars_matrix) <- region
 #Name the rows with rownames() then print
 rownames(star_wars_matrix) <- titles
 star_wars_matrix
 
-#Calculate totals for each row of matrix 
+### Calculate totals for each row of a matrix 
 worldwide_vector <- rowSums(star_wars_matrix)
+worldwide_vector
 
-#Merge matrices/vectors by column
+### Merge matrices/vectors by column
 all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
+all_wars_matrix
 
-#Merge matrices/vectors by row
+### Merge matrices/vectors by row
 rbind(star_wars_matrix, c(1,2))
 
-#Calculate totals for each column of matrix
+### Calculate totals for each column of matrix
 colSums(star_wars_matrix)
 
-#You can use [] to select specific elements from a matrix. Use a comma to separate rows from columns with the rows on the left:
+### You can use [] to select specific elements from a matrix. Use a comma to separate rows from columns with the rows on the left:
 star_wars_matrix[1,2]
 
-#Select all elements of a row or column by leaving out the number on the other side of the comma:
+### Select all elements of a row or column by leaving out the number on the other side of the comma:
 star_wars_matrix[,1]
 star_wars_matrix[1,]
 
-#Math w/ matrices
-#Use standard operators (+, *, etc)
-#Multiply matrix by 2
+## Math w/ matrices
+### Use standard operators (+, *, etc)
+
+### Example: Multiply matrix by 2
 star_wars_matrix * 2
 
-#Matrices can be multiplied by eachother where each element is the product of the cooresponding elements
+### Matrices can be multiplied by eachother where each element is the product of the cooresponding elements
 star_wars_matrix * star_wars_matrix
 
 ## Factors
-#Factor = statistical data type used to store catagorical variables 
-#A catagorical variable can belong to a limited number of categories, as opposed to a continuous variable that can respon to an infinite number of values 
 
-#Use the function factor() to create factors
+### Factor = statistical data type used to store catagorical variables 
+### A catagorical variable can belong to a limited number of categories, as opposed to a continuous variable that can respon to an infinite number of values 
 
-#First, create a vector that contains limited number of categories 
+## Use the function factor() to create factors
+
+### First, create a vector that contains limited number of categories 
 sex_vector <- c("Male", "Female", "Female", "Male", "Male")
 sex_vector
-#(this vector has 2 categories)
+### (this vector has 2 categories)
 
-#Encode vector as a factor:
+### Encode vector as a factor:
 factor_sex_vector <- factor(sex_vector)
 factor_sex_vector
 
-#There are 2 types of categorical variables: 
-#1) Nominal categorical variables do not have an implied order
-#2) Ordinal categorical variables do have an apparent order
+### There are 2 types of categorical variables: 1) Nominal categorical variables do not have an implied order 2) Ordinal categorical variables do have an apparent order
 
-#Factor levels:
-#factors can contain specific factor levels. Use levels() to change names of these levels.
+## Factor levels:
+### factors can contain specific factor levels. Use levels() to change names of these levels.
 levels(factor_sex_vector) <- c("name1", "name2")
 factor_sex_vector
 
-#Pay attention to the order in which you assign levels; if you don;t specify the levels of the factor, they will be assigned alphabetically. Type: 
+### Pay attention to the order in which you assign levels; if you don;t specify the levels of the factor, they will be assigned alphabetically. Type: 
 levels(factor_sex_vector)
-#to see outputs in the order which you should type the corresponding names
+### to see outputs in the order which you should type the corresponding names
 
-#Summarizing a factor 
-#The command summary() will give you an overview of the contents of a variable
+## Summarizing a factor 
+### The command summary() will give you an overview of the contents of a variable
 summary(sex_vector)
 
-#You can try to compare values in a factor...
+### You can try to compare values in a factor...
 female <- factor_sex_vector[2]
 male <- factor_sex_vector[1]
 male > female
-#But it won't work b/c male and female are nominal factor levels
+### But it won't work b/c male and female are nominal factor levels
 
-#Ordered factors
-#example, first create a vector:
+## Ordered factors
+### Example: first create a vector
 speed_vector <- c("medium", "slow", "slow", "medium", "fast")
 
-#convert speed_vector from an unordered factor (defult using factor()) to an ordinal one
-#Do this by adding two additional arguments: ordered and levels
+### Convert speed_vector from an unordered factor (which is the defult using factor()) to an ordinal one. Do this by adding two additional arguments: ordered and levels
 factor_speed_vector <- factor(speed_vector,
 ordered = TRUE,
 levels = c("slow", "medium", "fast"))
+### We can now compare elements as factor_speed_vector is ordered
 
-#We can now compare elements as factor_speed_vector is ordered
-#Compare second and fifth values
+### Compare second and fifth values
 factor_speed_vector[2] > factor_speed_vector[5]
 
 ## Data frames
-#Data frames have variables of a data set as columns and the observations as rows
-#It can be useful to show a small part of a data set. Use function head() to show first observations of a data frame. Use function tail() to show last observations.
-#Both functions print a "header" which has names of variables
+### Data frames have variables of a data set as columns and the observations as rows. It can be useful to show a small part of a data set. Use function head() to show first observations of a data frame. Use function tail() to show last observations. Both functions print a "header" which has names of variables
 
-#The function str() shows the structure of a data set
+### The function str() shows the structure of a data set
 
-#Creating a data frame
-#Use the data.frame() function
-#You can use [] to select elements from a data frame
+## Creating a data frame
+### Use the data.frame() function
+### You can use [] to select elements from a data frame
 
 ## Lists
