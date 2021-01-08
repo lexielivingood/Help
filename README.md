@@ -8,7 +8,7 @@
 
 ### Use # to add comments that aren't run as R code
 
-### Math W/ R
+## Math 
 
 ### Addition: 
 3 + 4
@@ -23,45 +23,45 @@
 ### Modulo:(remainder of division)
 28 %% 6
 
-## STORE A VALUE AS A VARIABLE
+## Store a value as a variable 
 
-#Assign a value 4 to the variable my_var:
+### Assign a value 4 to the variable my_var using this command:
 my_var <- 4
 
-#type name of variable to print to show value 
+### Type the name of the variable to print to show value 
 my_var
 
-#Add 2 variables together 
+### Add 2 variables together 
 my_apples <- 4
 my_oranges <- 4
 my_apples + my_oranges 
 
-#BASIC DATA TYPES
+## Basic data types
 
-#adding different data types together won't work
+#### adding different data types together won't work
 4 + six
 
-#Decimal values like 4.5 are called numerics.
-#Whole numbers like 4 are called integers. Integers are also numerics.
-#Boolean values (TRUE or FALSE) are called logical.
-#Text (or string) values are called characters.
-#quotation marks indicate that "some text" is a string
+#### Decimal values like 4.5 are called numerics.Whole numbers like 4 are called integers. Integers are also numerics.Boolean values (TRUE or FALSE) are called logical.Text (or string) values are called characters.
+
+### quotation marks indicate that "some text" is a string
 my_character <- "universe"
 my_character 
 
-#CHECK DATA TYPE TO AVOID ERRORS 
+### Check data type to avoid errors with class()
 class(my_character)
 
-
 ## Vectors
+### Vectors = one-dimension arrays that can hold data
 
-#Vectors = one-dimension arrays that can hold data
-#CREATE A VECTOR 
+### Create a vector with c()
 numeric_vector <- c(1, 2, 3)
 character_vector <- c("a", "b", "c")
+numeric_vector
+character_vector
 
-#NAMING A VECTOR
-#Give names to the elements of a vector 
+## Naming a vector
+
+### Give names to the elements of a vector 
 some_vector <- c("Element1", "Element2")
 names(some_vector) <- c("Name1", "Name2")
 some_vector
