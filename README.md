@@ -320,5 +320,21 @@ my_df <- mtcars[1:10,]
 my_list <- list(my_vector, my_matrix, my_df)
 my_list
 
-## Creating a named list 
+## Naming lists
+### You can either name a list like this...
+my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
+my_list
+### Or by using the names() function:
+names(my_list) <- c("vec"", "mat"", "df"")
+my_list
+
+## Selecting elements from a list
+### One way to select a componenet is to use the numbered position, for example:
+my_list[[1]]
+my_list$vec
+###Make sure to use double brackets for lists, unlike vectors 
+
+### Select a specific element from a componenet:
+my_list[[2]][1]
+my_list$df[4]
 
